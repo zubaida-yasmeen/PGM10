@@ -1,0 +1,25 @@
+name: DevOps Pipeline
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run Python File
+        run: python App.py
+
+      - name: Run java File
+        run: javac app.java
