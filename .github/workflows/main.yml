@@ -20,6 +20,3 @@ jobs:
 
       - name: Run Python File
         run: python App.py
-
-      - name: Run java File
-        run: javac app.java
